@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../images/fugneiz-logo.png';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -22,10 +23,10 @@ const Navbar = () => {
       <div 
         className={`absolute flex flex-col top-14 left-0 border border-slate-600 w-full justify-center items-center gap-2 bg-zinc-800 p-2 pl-4 transform origin-top transition-transform duration-300 ${open ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 pointer-events-none"}`}
       >
-        <a href='/' className='text-white hover:text-slate-300 hover:scale-105 duration-200 hover:border-b border-slate-300 w-full pb-1 f1'>Home</a>
+        <Link to='/' className='text-white hover:text-slate-300 hover:scale-105 duration-200 hover:border-b border-slate-300 w-full pb-1 f1'>Home</Link>
         <a href='#about' className='text-white hover:text-slate-300 hover:scale-105 duration-200 hover:border-b border-slate-300 w-full pb-1 f1'>About</a>
         <a href='#events' className='text-white hover:text-slate-300 hover:scale-105 duration-200 hover:border-b border-slate-300 w-full pb-1 f1'>Theme</a>
-        <a href='/events' className='text-white hover:text-slate-300 hover:scale-105 duration-200 hover:border-b border-slate-300 w-full pb-1 f1'>Events</a>
+        <Link to='/events' className='text-white hover:text-slate-300 hover:scale-105 duration-200 hover:border-b border-slate-300 w-full pb-1 f1'>Events</Link>
         <a href='#contact' className='text-white hover:text-slate-300 hover:scale-105 duration-200 hover:border-b border-slate-300 w-full pb-1 f1'>Contact</a>
       </div>
     </div>
